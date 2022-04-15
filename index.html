@@ -18,9 +18,13 @@
   </head>
   <body>
     <div id="app">
+
+      <!-- <a :href="url">Best web site</a> -->
+
       <div v-if="showBooks">
         <ul>
         <li v-for="book in books">
+          <img :src="book.img" :alt="book.title"
           <h3>{{book.title}}</h3>
           <p>{{book.author}}</p>
         </li>
@@ -31,13 +35,6 @@
         <span v-if="showBooks">Hide Books</span>
         <span v-else>Show Books</span>
       </button>
-
-      <br>
-      <div class="box" @mouseover="handleEvent($event,5)">Mouseover (enter)</div>
-      <div class="box" @mouseleave="handleEvent">Mourseleave</div>
-      <div class="box" @dblclick="handleEvent">double click</div>
-      <div class="box" @mousemove="handleMouseMove">Position - {{x}} {{y}}</div>
-    
     </div>
     <script src="app.js"></script>
   </body>
